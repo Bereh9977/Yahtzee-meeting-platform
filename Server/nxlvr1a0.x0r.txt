@@ -1,0 +1,32 @@
+﻿erDiagram
+  Conference_Participants {
+    ID int PK
+    Conference_ID int FK
+    User_ID int(NULL) FK
+    Guest_ID int(NULL) FK
+  }
+  Conference_Participants }o--|| Conferences : FK__Conferenc__Confe__44FF419A
+  Conference_Participants }o--|| Guests : FK__Conferenc__Guest__46E78A0C
+  Conference_Participants }o--|| Users : FK__Conferenc__User___45F365D3
+  Conferences {
+    Conference_ID int PK
+    Organizer_ID int FK
+    Start_time smalldatetime 
+    End_time smalldatetime 
+    Is_active bit 
+  }
+  Conferences }o--|| Users : FK__Conferenc__Organ__403A8C7D
+  Guests {
+    Guest_ID int PK
+    Guest_name varchar(255) 
+  }
+  Users {
+    User_ID int PK
+    User_login nvarchar(255) 
+    User_password nvarchar(255) 
+    User_name nvarchar(255) 
+  }
+
+
+
+link to diagram: https://dbdiagram.io/d/6807a56d1ca52373f5e72215

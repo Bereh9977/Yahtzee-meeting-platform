@@ -1,0 +1,64 @@
+﻿<Window x:Class="Client.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
+        Title="Conference App" Height="500" Width="400" Background="#FF232323" WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+        <!-- Стиль CustomButton1 -->
+        <Style x:Key="CustomButton1" TargetType="Button">
+            <Setter Property="Background" Value="#FF313131"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF232323"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="20">
+        <!-- Вкладки для логіну, реєстрації та входу як гість -->
+        <TabControl x:Name="MainTabControl" Background="#FF313131" BorderBrush="Transparent">
+            <TabItem x:Name="LoginTab" Header="Login">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Login" Foreground="White" Margin="0,0,0,5"/>
+                    <TextBox x:Name="LoginTextBox" Margin="0,0,0,10" Background="#FF212121" Foreground="White"/>
+                    <TextBlock Text="Password" Foreground="White" Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="PasswordBox" Margin="0,0,0,10" Background="#FF212121" Foreground="White"/>
+                    <Button Style="{StaticResource CustomButton1}" Content="Sign In" Click="Login_Click" Height="36"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem x:Name="RegisterTab" Header="Register">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Username" Foreground="White" Margin="0,0,0,5"/>
+                    <TextBox x:Name="RegUsernameTextBox" Margin="0,0,0,10" Background="#FF212121" Foreground="White"/>
+                    <TextBlock Text="Login" Foreground="White" Margin="0,0,0,5"/>
+                    <TextBox x:Name="RegLoginTextBox" Margin="0,0,0,10" Background="#FF212121" Foreground="White"/>
+                    <TextBlock Text="Password" Foreground="White" Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="RegPasswordBox" Margin="0,0,0,10" Background="#FF212121" Foreground="White"/>
+                    <Button Style="{StaticResource CustomButton1}" Content="Register" Click="Register_Click" Height="35"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem x:Name="GuestTab" Header="Guest">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Guest Name" Foreground="White" Margin="0,0,0,5"/>
+                    <TextBox x:Name="GuestNameTextBox" Margin="0,0,0,10" Background="#FF212121" Foreground="White"/>
+                    <Button Style="{StaticResource CustomButton1}" Content="Join as Guest" Click="GuestJoin_Click" Height="36"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
