@@ -34,7 +34,6 @@ Both parts are built using **Windows Presentation Foundation (WPF)**, making the
 ### Server Application
 - Built-in database management (`DatabaseService.cs`)
 - Conference hosting and management
-- Server builder logic (`ServerBuilder.cs`)
 - Entity Framework integration for data persistence
 
 ### Common Capabilities
@@ -107,9 +106,17 @@ If you want to add new features or fix bugs:
 ---
 
 ## Authors
-Nazar Berehchuk (GitHub: @Bereh9977)
-Anastasiia Kolomiiets (GitHub: @anastasiia-kolomiiets)
-Artem Pryimachenko (GitHub: @shadexcess)
+- Nazar Berehchuk (GitHub: @Bereh9977)
+- Anastasiia Kolomiiets (GitHub: @anastasiia-kolomiiets)
+- Artem Pryimachenko (GitHub: @shadexcess)
+
+---
+
+## Screenshots
+
+<img width="377" height="479" alt="Знімок екрана 2026-03-26 153616" src="https://github.com/user-attachments/assets/a2902481-a4e0-454b-aa47-87474c55ceba" />
+<img width="378" height="389" alt="Знімок екрана 2026-03-26 153714" src="https://github.com/user-attachments/assets/816cb9ff-ee9c-46e5-aa91-90a6cb0bf4b4" />
+<img width="1690" height="1069" alt="Знімок екрана 2026-03-26 153804" src="https://github.com/user-attachments/assets/2ec9e13a-cf4f-40f6-81a5-72d812685e55" />
 
 ---
 
